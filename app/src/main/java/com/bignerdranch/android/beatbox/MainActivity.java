@@ -17,7 +17,16 @@ public class MainActivity extends ActionBarActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent   = new Intent(getApplicationContext(),BeatBoxActivity.class);
+                Intent intent   = new Intent(getApplicationContext(), BeatBoxActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton button1 = (ImageButton)findViewById(R.id.sandar);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BeatBoxActivity.class);
                 startActivity(intent);
             }
         });

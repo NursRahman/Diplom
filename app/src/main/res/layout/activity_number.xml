@@ -5,20 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context="com.bignerdranch.android.beatbox.AlphabetActivity">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
-        android:id="@+id/imageForAlphabet"
+        android:id="@+id/imageForNumber"
         android:layout_weight="9"/>
 
     <ImageButton
         android:id="@+id/button_click_sound"
         android:layout_width="wrap_content"
-        android:layout_height="183dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@android:color/transparent"
-        android:src="@drawable/gir" />
+        android:src="@drawable/girr" />
+
 </LinearLayout>
