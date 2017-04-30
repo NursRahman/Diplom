@@ -9,15 +9,17 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BeatBoxActivity"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name"></activity>
         <activity android:name=".AlphabetActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NumberActivity"></activity>
+        <activity android:name=".NumberDetailActivity"></activity>
     </application>
 
 </manifest>

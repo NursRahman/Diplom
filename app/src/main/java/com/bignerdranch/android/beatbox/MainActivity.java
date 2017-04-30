@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BeatBoxActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NumberActivity.class);
                 startActivity(intent);
             }
         });
