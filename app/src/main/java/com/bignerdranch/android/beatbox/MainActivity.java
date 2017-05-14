@@ -31,6 +31,7 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
         ImageButton button2 = (ImageButton)findViewById(R.id.practice);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,5 +40,6 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

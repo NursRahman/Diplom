@@ -18,8 +18,6 @@ import java.util.ArrayList;
 
 public class NumberActivity extends AppCompatActivity{
     ImageButton imageButton;
-    BeatBox mBeatBox;
-    ImageView imageViewForNumber;
     RecyclerView recyclerView;
     ArrayList<Integer> integers;
     @Override
@@ -29,43 +27,10 @@ public class NumberActivity extends AppCompatActivity{
         setData();
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_for_number);
         imageButton = (ImageButton) findViewById(R.id.button_click_sound);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 4));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(new NumberAdapter(this, integers));
     }
-//        Log.e("TAG", String.valueOf(getResources().getDrawable(R.drawable.bir)));
-//        switch (mSound.getName()){
-//            case "bir":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.bir));
-//                break;
-//            case "eki":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.eki));
-//                break;
-//            case "uch":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.uch));
-//                break;
-//            case "tort":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.tort));
-//                break;
-//            case "besh":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.besh));
-//                break;
-//            case "alty":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.alty));
-//                break;
-//            case "jeti":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.jeti));
-//                break;
-//            case "segiz":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.segiz));
-//                break;
-//            case "toguz":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.toguz));
-//                break;
-//            case "on":
-//                imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.on));
-//                break;
-//        }
-//    }
+//
     private void setData(){
         integers = new ArrayList<>();
         integers.add(1);
