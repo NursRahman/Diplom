@@ -2,6 +2,7 @@ package com.bignerdranch.android.beatbox;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,7 +49,7 @@ public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.NumberHold
         private Button mButton;
         private Integer integer;
 
-        public NumberHolder(LayoutInflater inflater, ViewGroup parent) {
+        public NumberHolder(final LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_item_sound, parent, false));
 
             mButton = (Button)itemView.findViewById(R.id.button);
@@ -56,7 +57,9 @@ public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.NumberHold
                 @Override
                 public void onClick(View v) {
                     Intent intent  = new Intent(context,NumberDetailActivity.class);
-                    intent.putExtra("MINTEGER",integer);
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("INTEGER_VALUE",integer);
+                    intent.putExtras(bundle);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }

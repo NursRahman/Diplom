@@ -21,15 +21,15 @@ public class NumberDetailActivity extends ActionBarActivity {
         button = (ImageButton) findViewById(R.id.button_click_sound);
         mBeatBox = new BeatBox(getApplicationContext());
         imageViewForNumber = (ImageView)findViewById(R.id.imageForNumber);
-        Intent intent = getIntent();
-        final Sound mSound = (Sound) intent.getSerializableExtra("MSOUND");
+        final Intent intent = getIntent();
+        final Bundle bundle = (Bundle) getIntent().getExtras();
+        final Integer integer = bundle.getInt("INTEGER_VALUE");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                mBeatBox.play(mSound);
+            public void onClick(View v) {//mBeatBox.play();
             }
         });
-        switch (mSound.getName()) {
+        switch (integer.toString()) {
             case "1":
                 imageViewForNumber.setImageDrawable(getResources().getDrawable(R.drawable.bir));
                 break;

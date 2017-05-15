@@ -23,7 +23,6 @@ public class BeatBoxFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mBeatBox = new BeatBox(getActivity());
     }
 
@@ -62,6 +61,107 @@ public class BeatBoxFragment extends Fragment {
         public void bindSound(Sound sound) {
             mSound = sound;
             mButton.setText(mSound.getName());
+            if (mSound.getName().equals("uu")){
+                mButton.setText("Үү");
+            }
+            switch (mSound.getName()){
+                case "a":
+                    mButton.setText("А");
+                    break;
+                case "b":
+                    mButton.setText("Б");
+                    break;
+                case "c":
+                    mButton.setText("В");
+                    break;
+                case "d":
+                    mButton.setText("Г");
+                    break;
+                case "e":
+                    mButton.setText("Д");
+                    break;
+                case "f":
+                    mButton.setText("Е");
+                    break;
+                case "g":
+                    mButton.setText("Ж");
+                    break;
+                case "h":
+                    mButton.setText("З");
+                    break;
+                case "i":
+                    mButton.setText("И");
+                    break;
+                case "j":
+                    mButton.setText("Й");
+                    break;
+                case "k":
+                    mButton.setText("К");
+                    break;
+                case "l":
+                    mButton.setText("Л");
+                    break;
+                case "m":
+                    mButton.setText("М");
+                    break;
+                case "n":
+                    mButton.setText("Н");
+                    break;
+                case "nn":
+                    mButton.setText("ң");
+                    break;
+                case "o":
+                    mButton.setText("О");
+                    break;
+                case "oo":
+                    mButton.setText("Ө");
+                    break;
+                case "p":
+                    mButton.setText("П");
+                    break;
+                case "r":
+                    mButton.setText("Р");
+                    break;
+                case "s":
+                    mButton.setText("С");
+                    break;
+                case "t":
+                    mButton.setText("Т");
+                    break;
+                case "u":
+                    mButton.setText("У");
+                    break;
+                case "uu":
+                    mButton.setText("Ү");
+                    break;
+                case "v":
+                    mButton.setText("Ф");
+                    break;
+                case "w":
+                    mButton.setText("Х");
+                    break;
+                case "x":
+                    mButton.setText("Ц");
+                    break;
+                case "y":
+                    mButton.setText("Ч");
+                    break;
+                case "z":
+                    mButton.setText("Ш");
+                    break;
+                case "z1":
+                    mButton.setText("Ы");
+                    break;
+                case "z2":
+                    mButton.setText("Э");
+                    break;
+                case "z3":
+                    mButton.setText("Ю");
+                    break;
+                case "z4":
+                    mButton.setText("Я");
+                    break;
+            }
         }
 
     }

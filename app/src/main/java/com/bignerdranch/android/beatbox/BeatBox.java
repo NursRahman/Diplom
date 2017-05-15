@@ -14,7 +14,7 @@ import java.util.List;
 public class BeatBox {
     private static final String TAG = "BeatBox";
 
-    private static final String SOUNDS_FOLDER = "sample_sounds";
+    //private static final String SOUNDS_FOLDER = "sample_sounds";
     private static final int MAX_SOUNDS = 5;
 
     private AssetManager mAssets;
@@ -24,7 +24,7 @@ public class BeatBox {
     public BeatBox(Context context) {
         mAssets = context.getAssets();
         mSoundPool = new SoundPool(MAX_SOUNDS, AudioManager.STREAM_MUSIC, 0);
-        loadSounds();
+        loadSoundsAlphabet();
     }
 
     public void play(Sound sound) {
@@ -43,11 +43,11 @@ public class BeatBox {
         return mSounds;
     }
 
-    private void loadSounds() {
+    private void loadSoundsAlphabet() {
 
         String[] soundNames;
         try {
-            soundNames = mAssets.list(SOUNDS_FOLDER);
+            soundNames = mAssets.list("sample_sounds");
             Log.i(TAG, "Found " + soundNames.length + " sounds");
         } catch (IOException ioe) {
             Log.e(TAG, "Could not list assets", ioe);
@@ -57,7 +57,79 @@ public class BeatBox {
         mSounds = new ArrayList<Sound>();
         for (String filename : soundNames) {
             try {
-                String assetPath = SOUNDS_FOLDER + "/" + filename;
+                String assetPath = "sample_sounds" + "/" + filename;
+                Sound sound = new Sound(assetPath);
+                load(sound);
+                mSounds.add(sound);
+            } catch (IOException ioe) {
+                Log.e(TAG, "Could not load sound " + filename, ioe);
+            }
+        }
+    }
+
+    private void loadSoundsNumber() {
+
+        String[] soundNames;
+        try {
+            soundNames = mAssets.list("sound_number");
+            Log.i(TAG, "Found " + soundNames.length + " sounds");
+        } catch (IOException ioe) {
+            Log.e(TAG, "Could not list assets", ioe);
+            return;
+        }
+
+        mSounds = new ArrayList<Sound>();
+        for (String filename : soundNames) {
+            try {
+                String assetPath = "sound_number" + "/" + filename;
+                Sound sound = new Sound(assetPath);
+                load(sound);
+                mSounds.add(sound);
+            } catch (IOException ioe) {
+                Log.e(TAG, "Could not load sound " + filename, ioe);
+            }
+        }
+    }
+
+    private void loadSoundsShape() {
+
+        String[] soundNames;
+        try {
+            soundNames = mAssets.list("sound_shape");
+            Log.i(TAG, "Found " + soundNames.length + " sounds");
+        } catch (IOException ioe) {
+            Log.e(TAG, "Could not list assets", ioe);
+            return;
+        }
+
+        mSounds = new ArrayList<Sound>();
+        for (String filename : soundNames) {
+            try {
+                String assetPath = "sound_shape" + "/" + filename;
+                Sound sound = new Sound(assetPath);
+                load(sound);
+                mSounds.add(sound);
+            } catch (IOException ioe) {
+                Log.e(TAG, "Could not load sound " + filename, ioe);
+            }
+        }
+    }
+
+    private void loadSoundsColor() {
+
+        String[] soundNames;
+        try {
+            soundNames = mAssets.list("sound_color");
+            Log.i(TAG, "Found " + soundNames.length + " sounds");
+        } catch (IOException ioe) {
+            Log.e(TAG, "Could not list assets", ioe);
+            return;
+        }
+
+        mSounds = new ArrayList<Sound>();
+        for (String filename : soundNames) {
+            try {
+                String assetPath = "sound_color" + "/" + filename;
                 Sound sound = new Sound(assetPath);
                 load(sound);
                 mSounds.add(sound);
