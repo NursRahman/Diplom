@@ -4,19 +4,19 @@
     android:id="@+id/activity_alphabet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.bignerdranch.android.beatbox.AlphabetActivity">
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/imageForAlphabet"
         android:layout_weight="9"/>
 
     <ImageButton
         android:id="@+id/button_click_sound"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:background="@android:color/transparent"
         android:src="@drawable/gir" />

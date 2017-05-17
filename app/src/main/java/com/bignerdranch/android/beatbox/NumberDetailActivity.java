@@ -26,7 +26,8 @@ public class NumberDetailActivity extends ActionBarActivity {
         final Integer integer = bundle.getInt("INTEGER_VALUE");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {//mBeatBox.play();
+            public void onClick(View v) {
+                //mBeatBox.play(integer);
             }
         });
         switch (integer.toString()) {

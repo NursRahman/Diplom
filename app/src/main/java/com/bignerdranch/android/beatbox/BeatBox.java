@@ -19,6 +19,7 @@ public class BeatBox {
 
     private AssetManager mAssets;
     private List<Sound> mSounds;
+    private List<Sound> mNumberSouds;
     private SoundPool mSoundPool;
 
     public BeatBox(Context context) {
@@ -78,7 +79,7 @@ public class BeatBox {
             return;
         }
 
-        mSounds = new ArrayList<Sound>();
+        mNumberSouds = new ArrayList<Sound>();
         for (String filename : soundNames) {
             try {
                 String assetPath = "sound_number" + "/" + filename;
