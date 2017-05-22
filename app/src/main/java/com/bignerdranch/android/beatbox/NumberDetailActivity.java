@@ -27,6 +27,7 @@ public class NumberDetailActivity extends ActionBarActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                button.setImageResource(R.drawable.hkyz);
                 //mBeatBox.play(integer);
             }
         });

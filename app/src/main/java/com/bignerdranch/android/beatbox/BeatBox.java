@@ -19,13 +19,18 @@ public class BeatBox {
 
     private AssetManager mAssets;
     private List<Sound> mSounds;
-    private List<Sound> mNumberSouds;
+    private List<Sound> mNumberSounds;
+    private List<Sound> mShapeSounds;
+    private List<Sound> mColorSounds;
     private SoundPool mSoundPool;
 
     public BeatBox(Context context) {
         mAssets = context.getAssets();
         mSoundPool = new SoundPool(MAX_SOUNDS, AudioManager.STREAM_MUSIC, 0);
         loadSoundsAlphabet();
+        loadSoundsNumber();
+        loadSoundsShape();
+        loadSoundsColor();
     }
 
     public void play(Sound sound) {
@@ -79,13 +84,13 @@ public class BeatBox {
             return;
         }
 
-        mNumberSouds = new ArrayList<Sound>();
+        mNumberSounds = new ArrayList<Sound>();
         for (String filename : soundNames) {
             try {
                 String assetPath = "sound_number" + "/" + filename;
                 Sound sound = new Sound(assetPath);
                 load(sound);
-                mSounds.add(sound);
+                mNumberSounds.add(sound);
             } catch (IOException ioe) {
                 Log.e(TAG, "Could not load sound " + filename, ioe);
             }
@@ -103,13 +108,13 @@ public class BeatBox {
             return;
         }
 
-        mSounds = new ArrayList<Sound>();
+        mShapeSounds = new ArrayList<Sound>();
         for (String filename : soundNames) {
             try {
                 String assetPath = "sound_shape" + "/" + filename;
                 Sound sound = new Sound(assetPath);
                 load(sound);
-                mSounds.add(sound);
+                mShapeSounds.add(sound);
             } catch (IOException ioe) {
                 Log.e(TAG, "Could not load sound " + filename, ioe);
             }
@@ -127,13 +132,13 @@ public class BeatBox {
             return;
         }
 
-        mSounds = new ArrayList<Sound>();
+        mColorSounds = new ArrayList<Sound>();
         for (String filename : soundNames) {
             try {
                 String assetPath = "sound_color" + "/" + filename;
                 Sound sound = new Sound(assetPath);
                 load(sound);
-                mSounds.add(sound);
+                mColorSounds.add(sound);
             } catch (IOException ioe) {
                 Log.e(TAG, "Could not load sound " + filename, ioe);
             }

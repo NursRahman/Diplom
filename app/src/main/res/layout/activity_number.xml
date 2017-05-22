@@ -9,18 +9,19 @@
     tools:context="com.bignerdranch.android.beatbox.AlphabetActivity">
 
     <ImageView
+        android:background="@android:color/transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
         android:id="@+id/imageForNumber"
         android:layout_weight="9"/>
 
     <ImageButton
         android:id="@+id/button_click_sound"
-        android:layout_width="wrap_content"
-        android:layout_height="174dp"
+        android:layout_width="106.5dp"
+        android:layout_height="195dp"
+        android:scaleType="fitXY"
         android:layout_gravity="center"
         android:background="@android:color/transparent"
-        android:src="@drawable/girr" />
+        android:src="@drawable/kyzh" />
 
 </LinearLayout>
