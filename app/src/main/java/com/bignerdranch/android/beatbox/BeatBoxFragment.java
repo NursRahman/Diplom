@@ -50,7 +50,7 @@ public class BeatBoxFragment extends Fragment {
             mButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent  = new Intent(getActivity(),AlphabetActivity.class);
+                    Intent intent  = new Intent(getActivity(), AlphabetActivity.class);
                     intent.putExtra("MSOUND",mSound);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     getActivity().startActivity(intent);

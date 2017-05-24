@@ -28,9 +28,7 @@ public class BeatBox {
         mAssets = context.getAssets();
         mSoundPool = new SoundPool(MAX_SOUNDS, AudioManager.STREAM_MUSIC, 0);
         loadSoundsAlphabet();
-        loadSoundsNumber();
-        loadSoundsShape();
-        loadSoundsColor();
+
     }
 
     public void play(Sound sound) {
