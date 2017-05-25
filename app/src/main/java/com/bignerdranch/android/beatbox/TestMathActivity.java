@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ import java.util.Random;
 
 public class TestMathActivity extends AppCompatActivity {
 
-    Button bir, eki, uch, tort, besh, alty, jeti, segiz, toguz, nol, enter, clear, next;
+    ImageButton bir, eki, uch, tort, besh, alty, jeti, segiz, toguz, nol, enter, clear, next;
     EditText editText;
     ImageView a, b, operator, d;
 
@@ -27,19 +28,19 @@ public class TestMathActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_math);
 
-        nol = (Button)findViewById(R.id.zero);
-        bir = (Button)findViewById(R.id.one);
-        eki = (Button)findViewById(R.id.two);
-        uch = (Button)findViewById(R.id.three);
-        tort = (Button)findViewById(R.id.four);
-        besh = (Button)findViewById(R.id.five);
-        alty = (Button)findViewById(R.id.six);
-        jeti = (Button)findViewById(R.id.seven);
-        segiz = (Button)findViewById(R.id.eight);
-        toguz = (Button)findViewById(R.id.nine);
-        enter = (Button)findViewById(R.id.enter);
-        clear = (Button)findViewById(R.id.clear);
-        next = (Button)findViewById(R.id.next);
+        nol = (ImageButton) findViewById(R.id.zero);
+        bir = (ImageButton) findViewById(R.id.one);
+        eki = (ImageButton) findViewById(R.id.two);
+        uch = (ImageButton) findViewById(R.id.three);
+        tort = (ImageButton) findViewById(R.id.four);
+        besh = (ImageButton) findViewById(R.id.five);
+        alty = (ImageButton) findViewById(R.id.six);
+        jeti = (ImageButton) findViewById(R.id.seven);
+        segiz = (ImageButton) findViewById(R.id.eight);
+        toguz = (ImageButton) findViewById(R.id.nine);
+        enter = (ImageButton) findViewById(R.id.enter);
+        clear = (ImageButton) findViewById(R.id.clear);
+        next = (ImageButton) findViewById(R.id.next);
         editText = (EditText)findViewById(R.id.editText);
         a = (ImageView)findViewById(R.id.a);
         b = (ImageView)findViewById(R.id.b);

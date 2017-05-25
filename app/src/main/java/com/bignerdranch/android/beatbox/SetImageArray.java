@@ -34,6 +34,15 @@ public class SetImageArray {
             R.drawable.seven,
             R.drawable.eight,
             R.drawable.nine,
+            R.drawable.ten,
+            R.drawable.eleven,
+            R.drawable.twelve,
+            R.drawable.thirteen,
+            R.drawable.fourteen,
+            R.drawable.fifteen,
+            R.drawable.sixteen,
+            R.drawable.seventeen,
+            R.drawable.eighteen
     };
 
 }
