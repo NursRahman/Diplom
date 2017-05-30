@@ -36,6 +36,14 @@ public class MainActivity extends ActionBarActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainDrawActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton button3 = (ImageButton)findViewById(R.id.figure);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TestMathActivity.class);
                 startActivity(intent);
             }

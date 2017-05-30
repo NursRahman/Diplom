@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_margin="4dp"
         >
         <ImageView
             android:src="@drawable/nine"
@@ -36,15 +36,19 @@
             android:layout_width="54.5dp"
             android:layout_height="54.5dp" />
         <ImageView
+            android:id="@+id/answer"
             android:layout_width="109dp"
-            android:layout_height="86.5dp" />
+            android:layout_height="86.5dp"
+            android:src="@drawable/suroo"
+            />
         
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+        android:layout_gravity="center"
+        >
 
         <EditText
             android:id="@+id/editText"
@@ -62,7 +66,6 @@
 
         <ImageButton
             android:id="@+id/one"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_above="@+id/four"
@@ -70,11 +73,10 @@
             android:layout_alignParentStart="true"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Bir" />
+            android:src="@drawable/mbir" />
 
         <ImageButton
             android:id="@+id/two"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignTop="@+id/one"
@@ -82,11 +84,10 @@
             android:layout_toRightOf="@+id/one"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Eki" />
+            android:src="@drawable/meki" />
 
         <ImageButton
             android:id="@+id/three"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignTop="@+id/two"
@@ -94,11 +95,10 @@
             android:layout_toRightOf="@+id/two"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Uch" />
+            android:src="@drawable/much" />
 
         <ImageButton
             android:id="@+id/four"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_above="@+id/seven"
@@ -106,11 +106,10 @@
             android:layout_alignParentStart="true"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Tort" />
+            android:src="@drawable/mtort" />
 
         <ImageButton
             android:id="@+id/five"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_above="@+id/eight"
@@ -118,11 +117,10 @@
             android:layout_toRightOf="@+id/four"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Besh" />
+            android:src="@drawable/mbesh" />
 
         <ImageButton
             android:id="@+id/six"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_above="@+id/nine"
@@ -130,11 +128,10 @@
             android:layout_toRightOf="@+id/five"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Alty" />
+            android:src="@drawable/malty" />
 
         <ImageButton
             android:id="@+id/seven"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentBottom="true"
@@ -142,11 +139,10 @@
             android:layout_alignParentStart="true"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Jeti" />
+            android:src="@drawable/mjeti" />
 
         <ImageButton
             android:id="@+id/eight"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentBottom="true"
@@ -154,11 +150,10 @@
             android:layout_toRightOf="@+id/seven"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Segiz" />
+            android:src="@drawable/msegiz" />
 
         <ImageButton
             android:id="@+id/nine"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentBottom="true"
@@ -166,11 +161,10 @@
             android:layout_toRightOf="@+id/eight"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Toguz" />
+            android:src="@drawable/mtoguz" />
 
         <ImageButton
             android:id="@+id/clear"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_above="@+id/nine"
@@ -178,11 +172,10 @@
             android:layout_toRightOf="@+id/three"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Clear" />
+            android:src="@drawable/mclear" />
 
         <ImageButton
             android:id="@+id/zero"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentBottom="true"
@@ -190,11 +183,10 @@
             android:layout_toRightOf="@+id/nine"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Nol" />
+            android:src="@drawable/mnol" />
 
         <ImageButton
             android:id="@+id/enter"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignTop="@+id/editText"
@@ -202,11 +194,10 @@
             android:layout_toRightOf="@+id/editText"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Enter" />
+            android:src="@drawable/menter" />
 
         <ImageButton
             android:id="@+id/next"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_above="@+id/clear"
@@ -214,6 +205,6 @@
             android:layout_toRightOf="@+id/three"
             android:background="@android:color/transparent"
             android:scaleType="fitXY"
-            android:src="@drawable/Next" />
+            android:src="@drawable/mnext" />
     </RelativeLayout>
 </LinearLayout>

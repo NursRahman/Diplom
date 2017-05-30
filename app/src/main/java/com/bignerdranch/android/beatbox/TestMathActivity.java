@@ -45,7 +45,7 @@ public class TestMathActivity extends AppCompatActivity {
         a = (ImageView)findViewById(R.id.a);
         b = (ImageView)findViewById(R.id.b);
         operator = (ImageView)findViewById(R.id.operator);
-
+        d = (ImageView)findViewById(R.id.answer);
 
         generateRandomNumbers();
         bir.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +130,7 @@ public class TestMathActivity extends AppCompatActivity {
             public void onClick(View v) {
                 editText.setText("");
                 generateRandomNumbers();
+                d.setImageDrawable(getResources().getDrawable(R.drawable.suroo));
             }
         });
 
@@ -138,12 +139,18 @@ public class TestMathActivity extends AppCompatActivity {
             public void onClick(View v) {
                String getEdit = editText.getText().toString();
                 answer = new Integer(getEdit).intValue();
+                if(answer==0){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Сан киргиз!!!", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
 
                 if (result==answer){
+                    d.setImageResource(SetImageArray.arrayImagesAnswer[result]);
                     Toast toast = Toast.makeText(getApplicationContext(), "Туура!!!", Toast.LENGTH_SHORT);
                     toast.show();
                 }
                 else{
+                    d.setImageResource(SetImageArray.arrayImagesAnswer[result]);
                     Toast toast = Toast.makeText(getApplicationContext(), "Туура эмес!!!", Toast.LENGTH_SHORT);
                     toast.show();
                 }
@@ -158,17 +165,17 @@ public class TestMathActivity extends AppCompatActivity {
         Random random = new Random();
         int flag = random.nextInt(2);
         if (flag==0){
-            first_num = random.nextInt(10) + 1;
-            second_num = random.nextInt(first_num-1) + 1;
+            first_num = random.nextInt(9) + 1;
+            second_num = random.nextInt(first_num)+1;
+            operator.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.minus));
             result = first_num - second_num;
         }
         else{
-            first_num = random.nextInt(10) + 1;
-            second_num = random.nextInt(10) + 1;
+            first_num = random.nextInt(9) + 1;
+            second_num = random.nextInt(9) + 1;
             result = first_num + second_num;
             operator.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.plus));
         }
-
         a.setImageResource(SetImageArray.arrayImages[first_num]);
         b.setImageResource(SetImageArray.arrayImages[second_num]);
 
