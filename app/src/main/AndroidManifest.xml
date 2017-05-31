@@ -21,7 +21,8 @@
         <activity android:name=".NumberActivity" />
         <activity android:name=".NumberDetailActivity" />
         <activity android:name=".MainDrawActivity" />
-        <activity android:name=".TestMathActivity"></activity>
+        <activity android:name=".TestMathActivity" />
+        <activity android:name=".FigureActivity"></activity>
     </application>
 
 </manifest>
